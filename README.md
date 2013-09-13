@@ -12,7 +12,7 @@ You have to install <a href="http://wiringpi.com/download-and-install/">wiringPi
 	<code>
 git clone https://github.com/cthoma/rpi-si4703.git
 cd rpi-si4703/
-gcc -o Radio Radio.cpp Si4703_Breakout.cpp -lwiringPi
+gcc -o Radio example/Radio.cpp Si4703_Breakout.cpp -lwiringPi
 sudo ./Radio
 	</code>
 </pre>
