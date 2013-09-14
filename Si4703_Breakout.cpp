@@ -211,7 +211,7 @@ uint8_t Si4703_Breakout::readRegisters()
         //Remember, register 0x0A comes in first so we have to shuffle the array around a bit
         for (int x = 0x0A; ; x++) {
                 if (x == 0x10) x = 0; //Loop back to zero
-                si4703_registers[x] = (buffer[i] >> 8) | (buffer[i] << 8); // Convert to big-endian
+                si4703_registers[x] = (buffer[i] >> 8) | (buffer[i] << 8); // Convert to little-endian
                 i++;
                 if (x == 0x09) break; //We're done!
         }

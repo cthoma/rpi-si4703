@@ -61,14 +61,14 @@ class Si4703_Breakout
 {
 public:
         Si4703_Breakout(int resetPin, int sdioPin);
-        int powerOn();					// call in setup
+        int powerOn();	// call in setup
         void powerOff();
-        void setChannel(int channel);  	// 3 digit channel number
-        int seekUp(); 					// returns the tuned channel or 0
+        void setChannel(int channel);	// 3 digit channel number
+        int seekUp();	// returns the tuned channel or 0
         int seekDown();
-        void setVolume(int volume); 	// 0 to 15
+        void setVolume(int volume);	// 0 to 15
         void readRDS(char* message, long timeout);
-        int getChannel();								// message should be at least 9 chars
+        int getChannel();	// message should be at least 9 chars
         void printRegisters();
         // result will be null terminated
         // timeout in milliseconds
